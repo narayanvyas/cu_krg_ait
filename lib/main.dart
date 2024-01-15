@@ -23,7 +23,16 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text('Hello World'),
+          Text(
+            'Hello World',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.blue,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Image.network(
+              'https://cdn.pixabay.com/photo/2023/12/20/22/35/desert-8460850_1280.jpg'),
           Container(
             height: 30,
           ),
