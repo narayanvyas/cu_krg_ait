@@ -12,7 +12,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Helloi');
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+        title: Text(
+          'My Home Page',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
   }
 }
 
