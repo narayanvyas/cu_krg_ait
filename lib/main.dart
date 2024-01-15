@@ -21,6 +21,19 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      body: Column(
+        children: [
+          Text('Hello World'),
+          Container(
+            height: 30,
+          ),
+          Text('Hello World'),
+          Container(
+            height: 30,
+          ),
+          Text('Hello World'),
+        ],
+      ),
     );
   }
 }
