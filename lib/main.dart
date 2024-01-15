@@ -31,10 +31,33 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          Image.network(
-              'https://cdn.pixabay.com/photo/2023/12/20/22/35/desert-8460850_1280.jpg'),
           Container(
             height: 30,
+          ),
+          Row(
+            children: [
+              Column(
+                children: [
+                  Image.network(
+                    'https://cdn.pixabay.com/photo/2023/12/20/22/35/desert-8460850_1280.jpg',
+                    width: 200,
+                  ),
+                  Text('First Image')
+                ],
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              Column(
+                children: [
+                  Image.network(
+                    'https://cdn.pixabay.com/photo/2023/12/20/22/35/desert-8460850_1280.jpg',
+                    width: 200,
+                  ),
+                  Text('First Image')
+                ],
+              )
+            ],
           ),
           Text('Hello World'),
           Container(
