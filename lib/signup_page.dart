@@ -1,5 +1,30 @@
 import 'package:flutter/material.dart';
 
+final TextEditingController nameController = TextEditingController();
+final TextEditingController emailController = TextEditingController();
+final TextEditingController passwordController = TextEditingController();
+
+bool validateForm() {
+  if (nameController.text.length < 2) {
+    print('Name is incorrect');
+    return false;
+  } else if (emailController.text.length < 2) {
+    print('Email is incorrect');
+    return false;
+  } else if (passwordController.text.length < 3) {
+    print('Password is incorrect');
+    return false;
+  } else {
+    return true;
+  }
+}
+
+void performLogin() {
+  if (validateForm()) {
+    print('Login Success');
+  }
+}
+
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
 
@@ -17,13 +42,35 @@ class SignupPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 30),
           shrinkWrap: true,
           children: [
-            TextField(),
+            TextField(
+              controller: nameController,
+              decoration: InputDecoration(
+                hintText: 'Name',
+                border: OutlineInputBorder(),
+              ),
+            ),
             Container(height: 30),
-            TextField(),
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(
+                hintText: 'Email',
+                border: OutlineInputBorder(),
+              ),
+            ),
             Container(height: 30),
-            TextField(),
+            TextField(
+              controller: passwordController,
+              decoration: InputDecoration(
+                hintText: 'Password',
+                border: OutlineInputBorder(),
+              ),
+            ),
             Container(height: 30),
-            ElevatedButton(onPressed: () {}, child: Text('Signup Now'))
+            ElevatedButton(
+                onPressed: () {
+                  performLogin();
+                },
+                child: Text('Signup Now'))
           ],
         ),
       ),
