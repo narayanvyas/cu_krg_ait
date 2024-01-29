@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 import 'signup_page.dart';
 
 // To create Stateless Page - Type 'stl'
