@@ -1,4 +1,4 @@
-import 'package:cu_krg_ait/login_page.dart';
+import 'package:cu_krg_ait/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -27,8 +27,8 @@ void performSignup() {
   }
 }
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class SignupPage extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.black54,
           title: Text(
-            'Signup Page',
+            'Login Page',
             style: TextStyle(color: Colors.white),
           )),
       body: Center(
@@ -79,14 +79,14 @@ class SignupPage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                print('Redirecting to Login Page');
+                print('Redirecting to Signup Page');
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(
-                      builder: (context) => LoginPage(),
+                      builder: (context) => SignupPage(),
                     ),
                     (route) => false);
               },
-              child: Center(child: Text('Already have an account? Login Now')),
+              child: Center(child: Text('Don\'t have an account? Create Now')),
             )
           ],
         ),
